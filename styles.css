@@ -1,0 +1,312 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    color:black;
+}
+nav{
+    display: flex;
+    width:90%;
+    margin: 50px auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .name{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: clamp(20px, 2.5vw, 25px);
+    letter-spacing: 1px;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    z-index: 1;
+}
+nav .links{
+    display: flex;
+}
+nav .links a{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    padding: 17px;
+    letter-spacing: 2px;
+    border-radius: 1px;
+}
+nav .links a:hover{
+    background-color: black;
+    color:white;
+    transition: 1s;
+}
+nav .menuBtn{
+    display: none;
+    flex-direction: column;
+    width:15px;
+    height:15px;
+    justify-content: space-between;
+    z-index: 1;
+    cursor: pointer;
+}
+nav .menuBtn div{
+    background-color: black;
+    width:100%;
+    height:2px;
+}
+footer{
+    text-align: center;
+    width:100%;
+    margin: 21px auto;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    text-transform: uppercase;
+    font-size: 12px;
+    color:rgba(0, 0, 0, 0.252);
+}
+.footer_content{
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 100px auto;
+    justify-content: space-between;
+    width: 75%;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    border-top: solid rgba(0, 0, 0, 0.171) 1px;
+    text-align: center;
+}
+.footer_content div{
+    margin:25px auto;
+}
+.footer_content h1{
+    text-transform: uppercase;
+    margin:10px auto;
+}
+.footer_content p{
+    color:rgba(0, 0, 0, 0.58);
+}
+@media(max-width:1000px){
+    body.active{
+        overflow: hidden;
+        padding-right: 15px
+    }
+    nav .links{
+        display: none;
+    }
+    nav .links a{
+        color:white;
+        font-size: 45px;
+    }
+    nav .menuBtn{
+        display: flex;
+    }
+    nav #name.active{
+        color:white;
+    }
+    nav .links.active{
+        display: flex;
+        background-color: black;
+        height: 100vh;
+        width:100%;
+        top:0;
+        left:0;
+        position: absolute;
+    }
+    nav .links .container.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        height:50%;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+    nav .menuBtn.active{
+        align-items: flex-start;
+    }
+    nav .menuBtn.active div{
+        background-color: white;
+    }
+    footer.active{
+        color:rgba(255, 255, 255, 0.252);
+        position: absolute;
+        color:rgba(255, 255, 255, 0.252);
+        bottom: 0;
+    }
+}
+/*Portfolio S*/
+.i_one_text{
+    margin:150px auto auto auto;
+    width:80%;
+    text-align: center;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: clamp(12px, 2.5vw, 17px);
+    line-height: 2em;
+}
+.i_one_socials{
+    text-align: center;
+    margin-top: 25px;
+}
+.i_one_socials img{
+    width:15px;
+    margin: auto 5px;
+}
+.i_one_socials img:hover{
+    opacity: 0.5;
+    transition: .5s;
+}
+.i_photo_grid {
+  width: 90%;
+  margin: 75px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+}
+.i_photo_grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;    
+  object-fit: cover;      
+  display: block;
+  border-radius: 4px;     
+}
+.i_services_button{
+    width:100%;
+    text-align: center;
+}
+.i_services_button button{
+    background-color: transparent;
+    border-color: black;
+    padding:21px;
+    text-transform: uppercase;
+    border:solid black 1px;
+    cursor: pointer;
+    font-size: clamp(12px, 2.5vw, 17px);
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+.i_services_button button:hover{
+    background-color: black;
+    color:white;
+    transition: .75s;
+}
+/*Portfolio E*/
+/*Services S*/
+.box{
+    display: flex;
+    width:90%;
+    margin: auto;
+    align-items: center;
+    margin:100px auto;
+    padding-bottom: 100px;
+    border-bottom:solid rgba(0, 0, 0, 0.171)  1px;
+    justify-content: space-between;
+}
+.box .image{
+    width:40%;
+}
+.box .image img{
+    width:100%;
+}
+.box .information{
+    width:50%;
+}
+.box .information h1{
+    font-size: clamp(17px, 2.5vw, 30px);
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+.box .information .description{
+    margin-top: 17px;
+}
+.box .information .description li{
+    margin-left: 25px;
+    font-size: clamp(12px, 2.5vw, 20px);
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+.box .information .book_now_button button{
+    background-color: transparent;
+    border-color: black;
+    padding:21px;
+    text-transform: uppercase;
+    border:solid black 2px;
+    cursor: pointer;
+    font-size: clamp(12px, 2.5vw, 17px);
+    margin: 25px auto auto 25px;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+.box .information .book_now_button button:hover{
+    background-color: black;
+    color:white;
+    transition: .5s;
+    border-color: transparent;
+}
+@media (max-width:1000px) {
+    .box{
+        flex-direction: column;
+        width:75%;
+        align-items: baseline;
+    }
+    .box .image{
+        width:100%;
+        margin-bottom: 25px;
+    }
+    .box .information{
+        width:100%;
+    }
+}
+/*Services E*/
+/*Founder S*/
+.founder_box{
+    display: flex;
+    align-items: center;
+    width:80%;
+    margin: 50px auto auto auto;
+    justify-content: space-between;
+}
+.founder_box .text{
+    width:45%;
+}
+.founder_box .text h1{
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.founder_box .text p{
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: clamp(12px, 2.5vw, 17px);
+}
+.founder_box .image{
+    width:50%;
+    text-align: center;
+}
+.founder_box .image img{
+    width:90%;
+}
+.founder_box .text span{
+    display: block;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: clamp(10px, 1vw, 12px);
+    margin-top: 45px;
+}
+.founder_box .text  h2{
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    display: block;
+    color: rgba(0, 0, 0, 0.442);
+    font-size: 15px;
+    pointer-events: none;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+@media(max-width:1000px){
+    .founder_box{
+        flex-direction: column-reverse;
+    }
+    .founder_box .image{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .founder_box .text{
+        width: 90%;
+        text-align: center;
+    }
+    .founder_box .text p{
+        margin-top: 50px;
+    }
+}
+/*Founder E*/
