@@ -311,7 +311,7 @@ footer .socials img:hover{
         flex-direction: column-reverse;
         margin-bottom: 75px;
     }
-    .founder.image{
+    .founder .image{
         width: 90%;
         margin-bottom: 50px;
     }
