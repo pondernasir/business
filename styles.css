@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color:black;
+}
+@font-face {
+    font-family: logo;
+    src: url(THEBOLDFONT-FREEVERSION.otf);
+}
+nav {
+    width:85%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    align-items: center;
+}
+nav .name a{
+    font-family: logo;
+    font-size: clamp(20px, 2.5vw, 25px);
+    letter-spacing: 1px;
+}
+nav .links a{
+    font-family: logo;
+    letter-spacing: 2px;
+    margin: auto 12px;
+}
+nav .links a:hover{
+    color:gray;
+    transition: .5s;
+}
+nav .menu_button{
+    display: none;
+    flex-direction: column;
+    height: 15px;
+    width: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 5;
+}
+nav .menu_button div{
+    background-color: black;
+    width:100%;
+    height: 2px;
+    border-radius: 21px;
+}
+footer{
+    border-top: solid rgba(0, 0, 0, 0.171) 1px;
+    width:75%;
+    margin: 25px auto auto auto;
+    padding-top:25px;
+}
+footer .copywrite{
+    width:100%;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.461);
+    font-family: "Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    text-transform: uppercase;
+    font-size: 12px;
+    pointer-events: none;
+    margin-bottom: 12px;
+}
+footer .section{
+    margin: 50px auto;
+    text-align: center;
+}
+footer .section h1{
+    font-family: "Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+footer .section p{
+    font-family: "Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    color:rgba(0, 0, 0, 0.661);
+}
+footer .socials{
+    text-align: center;
+    margin: 12.5px auto 50px auto;
+}
+footer .socials img{
+    width:15px;
+    margin: auto 5px;
+}
+footer .socials img:hover{
+    opacity: 0.5;
+    transition: .5s;
+}
+@media(max-width:1020px){
+    body.active{
+        overflow: hidden;
+    }
+    nav .background.active{
+        position: fixed;
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        align-content: center;
+    }
+    nav .links{
+        display: none;
+    }
+    nav .links.active{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 75vh;
+        width: 75%;
+        margin: 50px auto auto auto;
+    }
+    nav .links a{
+        display: inline-block;
+        margin: auto;
+        font-size: 65px;
+        color:white;
+    }
+    nav .links a:hover{
+        color:white;
+    }
+    nav .menu_button{
+        display: flex;
+    }
+    nav .menu_button.active{
+        align-items:flex;/*remove or change*/
+    }
+    nav .menu_button.active div{
+        background-color: white;
+    }
+}
+/*portfolio start*/
+.portfolio{
+    margin-top: 100px;
+}
+.portfolio .text{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    font-size: clamp(12px, 2.5vw, 17px);
+    line-height: 2em;
+    font-family: "Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+.portfolio .socials{
+    text-align: center;
+    margin: 20px auto 50px auto;
+}
+.portfolio .socials img{
+    width:15px;
+    margin: auto 5px;
+}
+.portfolio .socials img:hover{
+    opacity: 0.5;
+    transition: .5s;
+}
+.portfolio .images {
+  width: 90%;
+  margin: 75px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+}
+.portfolio .images img {
+  width: 100%;
+  aspect-ratio: 1 / 1;    
+  object-fit: cover;      
+  display: block;
+  border-radius: 4px;     
+}
+.portfolio_services{
+    text-align: center;
+    margin: auto;
+}
+.portfolio_services button{
+    background-color: transparent;
+    border-color: black;
+    padding: 21px;
+    text-transform: uppercase;
+    border:solid black 1px;
+    cursor: pointer;
+    font-family: "Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: clamp(12px, 2.5vw, 17px);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+.portfolio_services button:hover{
+    background-color: black;
+    color:white;
+    transition: .75s;
+}
+/*portfolio end*/
+/*services start*/
+.services{
+    width: 85%;
+    margin: 175px auto auto auto;
+}
+.services .section{
+    display: flex;
+    width:90%;
+    align-items: center;
+    margin:100px auto;
+    padding-bottom: 100px;
+    border-bottom:solid rgba(0, 0, 0, 0.171)  1px;
+    justify-content: space-between;
+}
+.services .section .image{
+    width:40%;
+
+}
+.services .section .image img{
+    width:100%;
+}
+.services .section .text{
+    width:50%;
+}
+.services .section .text h1{
+    font-size: clamp(25px, 2.5vw, 30px);
+    font-family:logo;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+}
+.services .section .text span{
+    font-size: clamp(9px, 2.5vw, 11px);
+    font-family:logo;
+    letter-spacing: 2px;
+    color:rgba(0, 0, 0, 0.442);
+}
+.services .section .description li{
+    margin-left: 25px;
+    font-size: clamp(12px, 2.5vw, 15px);
+    line-height: 2em;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+.services .section .text .book_now button{
+    background-color: transparent;
+    border-color: black;
+    padding:15px;
+    text-transform: uppercase;
+    border:solid black 1px;
+    cursor: pointer;
+    font-size: clamp(12px, 2.5vw, 17px);
+    margin: 25px auto auto 25px;
+    letter-spacing: 1px;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+.services .section .text .book_now button:hover{
+    background-color: black;
+    color:white;
+    transition: .5s;
+    border-color: transparent;
+}
+@media (max-width:1000px) {
+    .services .section{
+        flex-direction: column;
+        width:90%;
+        align-items: baseline;
+    }
+    .services .section .image{
+        width:100%;
+        margin-bottom: 25px;
+    }
+    .services .section .text{
+        width:100%;
+    }
+}
+/*services end*/
+/*founder start*/
+.founder{
+    display: flex;
+    align-items: center;
+    width:80%;
+    margin: 50px auto auto auto;
+    justify-content: space-between;
+}
+.founder .text{
+    width:45%;
+}
+.founder .text h1{
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.founder .text p{
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: clamp(12px, 2.5vw, 15px);
+}
+.founder .image{
+    width:50%;
+    text-align: center;
+}
+.founder .image img{
+    width:90%;
+    margin-bottom: 75px;
+}
+.founder .text span{
+    display: block;
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: clamp(10px, 1vw, 12px);
+    margin-top: 45px;
+}
+.founder .text  h2{
+    font-family:"Fira Code", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    display: block;
+    color: rgba(0, 0, 0, 0.442);
+    font-size: 15px;
+    pointer-events: none;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+@media(max-width:1000px){
+    .founder{
+        flex-direction: column-reverse;
+        margin-bottom: 75px;
+    }
+    .founder.image{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+    .founder .text{
+        width: 90%;
+        text-align: center;
+    }
+    .founder .text p{
+        margin-top: 50px;
+    }
+}
+/*founder end*/
